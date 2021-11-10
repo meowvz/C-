@@ -6,6 +6,7 @@ namespace Triangle
     {
         static void Main(string[] args)
         {
+            //Вывести на экран, консольного приложения, прямоугольный треугольник из звездочек “*”, с длиной катета m.
             Console.Write("Введите длину катета: ");
             int height = int.Parse(Console.ReadLine());
 
