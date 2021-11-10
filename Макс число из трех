@@ -1,0 +1,32 @@
+using System;
+
+namespace MaxNum
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Напишите программу, в которую пользователь вводит три вещественных числа. А программа их сравнивает, и выводит максимальное из них.
+            Console.Write("1: ");
+            double x1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("2: ");
+            double x2 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("3: ");
+            double x3 = Convert.ToDouble(Console.ReadLine());
+
+            var max = x1;
+            if (max < x2)
+            {
+                max = x2;
+            }
+
+            if (max < x3)
+            {
+                max = x3;
+            }
+
+            Console.WriteLine($"Максимальное из чисел {x1}, {x2}, {x3} равно {max}");
+            Console.ReadLine();
+        }
+    }
+}
