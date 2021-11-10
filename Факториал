@@ -1,0 +1,24 @@
+using System;
+
+namespace factorial
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Вычислить факториал числа p(при p > 0), используя цикл do while.
+            Console.Write("p = ");
+            long p = Convert.ToInt32(Console.ReadLine());
+            long i = p;
+            long factorial = 1;
+            do
+            {
+                factorial = factorial * i;
+                --i;
+            }
+            while (i > 1);
+            Console.WriteLine($"{p}! = {factorial}");
+            Console.ReadLine();
+        }
+    }
+}
