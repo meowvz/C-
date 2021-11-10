@@ -1,0 +1,23 @@
+using System;
+
+namespace Tabliza
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Используя вложенные циклы, вывести таблицы умножения от второй до шестой.
+            
+            Console.WriteLine("Таблица умножения");
+            for (int i = 2; i <= 10; i++)
+            {
+                for (int j = 2; j <= 6; j++)
+                {
+                    Console.Write($"{j}*{i}={j*i}\t");
+                }
+                Console.WriteLine();
+            }
+
+        }
+    }
+}
