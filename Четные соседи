@@ -1,0 +1,23 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        //Задана последовательность целых чисел. Подсчитать количество элементов, у которых четные соседи.
+        var n = Convert.ToInt32(Console.ReadLine());
+        var p = Array.ConvertAll(Console.ReadLine().Split(' '), s => int.Parse(s));
+
+        var count = 0;
+
+        for (var i = 1; i < n - 1; i++)
+        {
+            if(p[i - 1] % 2 == 0 && p[i + 1] % 2 == 0)
+            {
+                count++;
+            }
+        }
+
+        Console.WriteLine(count);
+    }
+}
