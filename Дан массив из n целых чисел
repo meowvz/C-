@@ -1,0 +1,20 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        //Дан массив из n целых чисел. Определите, сколько в нем элементов, больших двух своих соседей, и выведите количество таких элементов. Крайние элементы списка не учитывать, поскольку у них мало соседей.
+        var n = Convert.ToInt32(Console.ReadLine());
+        var p = Array.ConvertAll(Console.ReadLine().Split(' '), s => int.Parse(s));
+
+        var res = 0;
+
+        for (int i = 1; i < n - 1; i++)
+        {
+            res += p[i - 1] < p[i] && p[i + 1] < p[i] ? 1 : 0;
+        }
+
+        Console.WriteLine(res);
+    }
+}
