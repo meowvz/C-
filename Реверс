@@ -1,0 +1,24 @@
+using System;
+
+class Program
+{
+    static string Reverse(string str)
+    {
+        //Задание: Написать программу для получения реверсированной строки.
+        var retValue = string.Empty;
+        foreach(var symbol in str)
+        {
+            retValue = symbol + retValue;
+        }
+
+        return retValue;
+    }
+
+    static void Main(string[] args)
+    {
+        Console.Write("Введите строку для реверсирования: ");
+        var s = Console.ReadLine();
+        Console.WriteLine($"Реверс строки: {Reverse(s)}");
+        Console.ReadLine();
+    }
+}
