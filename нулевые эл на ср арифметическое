@@ -1,0 +1,31 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //В массиве действительных чисел все нулевые элементы заменить на среднее арифметическое всех элементов массива.
+            var n = Convert.ToInt32(Console.ReadLine());
+            var array = Array.ConvertAll(Console.ReadLine().Split(' '), s => double.Parse(s));
+            double sum = 0;
+            foreach (var a in array)
+            {
+                sum += a;
+            }
+            double SR = sum / array.Length; //ср ариф массива
+            for (int i = 0; i < n; i++)
+            {
+                if (array[i] == 0) //присваивание ср если 0 
+                {
+                    array[i] = SR; 
+                }
+            }
+            for (int i = 0; i < n; i++) //вывод массива
+            {
+                Console.Write(array[i] + " ");
+            }
+        }
+    }
+}
