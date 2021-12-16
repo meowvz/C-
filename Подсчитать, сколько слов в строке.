@@ -1,0 +1,23 @@
+using System;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            { 
+            //Дана строка, заканчивающаяся точкой. Подсчитать, сколько слов в строке.
+                string str = Console.ReadLine();
+                int counter = 0;
+                while (str.Contains('.'))
+                {
+                    int ind = str.IndexOf('.');
+                    str = str.Remove(ind, 1);
+                    counter++;
+                }
+                Console.WriteLine(counter);
+                }
+            }
+        }
+    }
